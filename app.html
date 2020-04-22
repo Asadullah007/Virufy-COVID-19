@@ -60,8 +60,6 @@
 				<p>Please take a few minutes to send us your cough sounds to help verify Coronavirus! </p>
 			</header>
 
-
-
 			<hr class="major" />
 			<form method="post" action="#">
 				<!-- Form -->
@@ -143,6 +141,7 @@
 				<!-- Break -->
 				<div class="row uniform">
 					<div id="cough">
+						<h1>Record Cough: </h1>
 						<button id="recordButton">Record</button>
 						<button id="pauseButton" disabled>Pause</button>
 						<button id="stopButton" disabled>Stop</button>
@@ -151,6 +150,7 @@
 				<!-- Break -->
 				<div class="row uniform">
 					<div id="breath">
+						<h1>Record Breath: </h1>
 						<button id="recordButton">Record</button>
 						<button id="pauseButton" disabled>Pause</button>
 						<button id="stopButton" disabled>Stop</button>
@@ -313,17 +313,16 @@
 				title: "Thank You!",
 				text: "Your Message has  been received , we will contact soon!",
 				icon: "success",
-				button: "Ok",
+				button: "Ok"
 			});
 		}
 
 		function show_instructions() {
 			swal({
-				title: "Testing",
-				text: "",
+				title: "Instructions - Record Cough",
+				text: "<img src='images/instructions.jpg' alt='test' class='modal-instructions'/>",
 				html: true,
-				icon: "success",
-				button: "let's do this!"
+				button: "Ok"
 			});
 		}
 
