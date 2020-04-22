@@ -58,11 +58,11 @@
 				<!-- Break -->
 				<label><span class="is-required">*</span>Has the patient given consent for participating in this research (link) ?   </label>
 				<div class="4u 12u$(small)">
-					<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+					<input type="radio" id="demo-priority-low" name="consent" checked>
 					<label for="demo-priority-low">Yes</label>
 				</div>
 				<div class="4u 12u$(small)">
-					<input type="radio" id="demo-priority-normal" name="demo-priority">
+					<input type="radio" id="demo-priority-normal" name="consent">
 					<label for="demo-priority-normal">No</label>
 				</div>
 				<!-- Break -->
@@ -77,15 +77,15 @@
 						<label><span class="is-required">*</span>Gender</label>
 					</div>
 					<div class="12u 12u$(small)">
-						<input type="radio" id="male" name="demo-priority" checked>
+						<input type="radio" id="male" name="gender" checked>
 						<label for="male">Male</label>
 					</div>
 					<div class="12u 12u$(small)">
-						<input type="radio" id="female" name="demo-priority">
+						<input type="radio" id="female" name="gender">
 						<label for="female">Female</label>
 					</div>
 					<div class="12u$ 12u$(small)">
-						<input type="radio" id="other" name="demo-priority">
+						<input type="radio" id="other" name="gender">
 						<label for="other">Other</label>
 					</div>
 				</div>
@@ -95,7 +95,7 @@
 					<div class="6u$">
 						<label><span class="is-required">*</span>Country</label>
 						<div class="select-wrapper">
-							<select name="demo-category" id="demo-category">
+							<select name="country" id="demo-category" placeholder="Select a Country">
 								<option value="">- Country -</option>
 								<option value="1">Pakistan</option>
 								<option value="1">Japan</option>
@@ -118,15 +118,15 @@
 				<div class="row uniform">
 					<div class="12u 12u$(small)">
 						<label><span class="is-required">*</span>Corona Test </label>
-						<input type="radio" id="Positive" name="demo-priority2" checked>
+						<input type="radio" id="Positive" name="corona-test" checked>
 						<label for="Positive">Positive</label>
 					</div>
 					<div class="12u 12u$(small)">
-						<input type="radio" id="Negative" name="demo-priority2">
+						<input type="radio" id="Negative" name="corona-test">
 						<label for="Negative">Negative</label>
 					</div>
 					<div class="12u$ 12u$(small)">
-						<input type="radio" id="not tested" name="demo-priority2">
+						<input type="radio" id="not tested" name="corona-test">
 						<label for="not tested">Not tested</label>
 					</div>
 				</div>
@@ -162,32 +162,32 @@
 					<div class="6u 12u$(small)">
 						<label><span class="is-required">*</span>Patient Reported Symptoms </span><br><br>
 
-						<input type="checkbox" id="roundtrip1" name="flight-type">
+						<input type="checkbox" id="roundtrip1" name="symptoms">
 						<label for="roundtrip1">Fever, chills, or sweating</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip2" name="flight-type">
+						<input type="checkbox" id="roundtrip2" name="symptoms">
 						<label for="roundtrip2">Shortness of breath</label>
 
 						<br>
-						<input type="checkbox" id="roundtrip3" name="flight-type">
+						<input type="checkbox" id="roundtrip3" name="symptoms">
 						<label for="roundtrip3"> New or worsening cough</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip4" name="flight-type">
+						<input type="checkbox" id="roundtrip4" name="symptoms">
 						<label for="roundtrip4">Sore throat</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip9" name="flight-type">
+						<input type="checkbox" id="roundtrip9" name="symptoms">
 						<label for="roundtrip9">Body aches</label>
 
 						<br>
 
-						<input type="checkbox" id="roundtrip7" name="flight-type">
+						<input type="checkbox" id="roundtrip7" name="symptoms">
 						<label for="roundtrip7">Loss of smell</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip8" name="flight-type">
+						<input type="checkbox" id="roundtrip8" name="symptoms">
 						<label for="roundtrip8">None</label>
 
 					</div>
@@ -198,32 +198,32 @@
 					<div class="6u 12u$(small)">
 						<label><span class="is-required">*</span>Medical History</label>
 
-						<input type="checkbox" id="roundtrip01" name="flight-type">
+						<input type="checkbox" id="roundtrip01" name="medical-history">
 						<label for="roundtrip01"> Asthma or chronic lung disease</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip02" name="flight-type">
+						<input type="checkbox" id="roundtrip02" name="medical-history">
 						<label for="roundtrip02">Pregnancy</label>
 
 						<br>
-						<input type="checkbox" id="roundtrip03" name="flight-type">
+						<input type="checkbox" id="roundtrip03" name="medical-history">
 						<label for="roundtrip03">Diabetes with complications</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip04" name="flight-type">
+						<input type="checkbox" id="roundtrip04" name="medical-history">
 						<label for="roundtrip04">Disease or conditions that make it harder to cough</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip09" name="flight-type">
+						<input type="checkbox" id="roundtrip09" name="medical-history">
 						<label for="roundtrip09">Congestive heart failure</label>
 
 						<br>
 
-						<input type="checkbox" id="roundtrip07" name="flight-type">
+						<input type="checkbox" id="roundtrip07" name="medical-history">
 						<label for="roundtrip07">Extreme obesity</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip08" name="flight-type">
+						<input type="checkbox" id="roundtrip08" name="medical-history">
 						<label for="roundtrip08">None</label>
 
 					</div>
@@ -240,11 +240,11 @@
 				<div class="row uniform"><br>
 					<div class="12u 12u$(small)">
 						<label><span class="is-required">*</span>Is the patient a smoker?</label>
-						<input type="radio" id="Y" name="demo-priority2">
+						<input type="radio" id="Y" name="smoker">
 						<label for="Y">Yes</label>
 					</div>
 					<div class="12u 12u$(small)">
-						<input type="radio" id="N" name="demo-priority2">
+						<input type="radio" id="N" name="smoker">
 						<label for="N">No</label>
 					</div>
 					<!-- Break -->
@@ -252,11 +252,11 @@
 					<div class="row uniform"><br>
 						<div class="12u 12u$(small)">
 							<label><span class="is-required">*</span>Patient Location </label>
-							<input type="radio" id="Home" name="demo-priority2">
+							<input type="radio" id="Home" name="location">
 							<label for="Home">Home</label>
 						</div>
 						<div class="12u 12u$(small)">
-							<input type="radio" id="Clinical Setting" name="demo-priority2">
+							<input type="radio" id="Clinical Setting" name="location">
 							<label for="Clinical Setting">Clinical setting</label>
 						</div>
 						<!-- Break -->
