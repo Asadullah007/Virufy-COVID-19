@@ -54,36 +54,36 @@
 	<!-- Main -->
 	<section id="main" class="wrapper">
 		<div class="inner">
-			<form method="post" action="#">
+			<form method="POST" enctype="multipart/form-data" action="#">
 				<!-- Break -->
 				<label><span class="is-required">*</span>Has the patient given consent for participating in this research (link) ?   </label>
 				<div class="4u 12u$(small)">
-					<input type="radio" id="demo-priority-low" name="research_consent" checked>
+					<input type="radio" id="demo-priority-low" name="research_consent" value="Yes" checked>
 					<label for="demo-priority-low">Yes</label>
 				</div>
 				<div class="4u 12u$(small)">
-					<input type="radio" id="demo-priority-normal" name="research_consent">
+					<input type="radio" id="demo-priority-normal" name="research_consent" value="No">
 					<label for="demo-priority-normal">No</label>
 				</div>
 				<!-- Break -->
 				<div class="row uniform">
 					<div class="6u 12u$(xsmall)">
-						<input type="text" name="age" id="age" value="" placeholder="Age" />
+						<input type="text" name="age" id="age" placeholder="Age" />
 					</div>
 				</div>
 				<!-- Break -->
 				<div class="row uniform">
 					<div class="12u 12u$(small)">
 						<label><span class="is-required">*</span>Gender</label>
-						<input type="radio" id="male" name="gender" checked>
+						<input type="radio" id="male" name="gender" value="Male" checked>
 						<label for="male">Male</label>
 					</div>
 					<div class="12u 12u$(small)">
-						<input type="radio" id="female" name="gender">
+						<input type="radio" id="female" name="gender" value="Female">
 						<label for="female">Female</label>
 					</div>
 					<div class="12u$ 12u$(small)">
-						<input type="radio" id="other" name="gender">
+						<input type="radio" id="other" name="gender" value="Other">
 						<label for="other">Other</label>
 					</div>
 				</div>
@@ -94,7 +94,7 @@
 						<label><span class="is-required">*</span>Country</label>
 						<div class="select-wrapper">
 							<select name="country" id="demo-category" placeholder="Select a Country">
-								<option value="Country">- Country -</option>
+								<option value="">- Country -</option>
 								<option value="Pakistan">Pakistan</option>
 								<option value="Japan">Japan</option>
 								<option value="USA">USA</option>
@@ -108,51 +108,44 @@
 				<div class="row uniform">
 					<div class="6u 12u$(small)">
 						<label><span class="is-required">*</span>Patient ID</label>
-						<input type="text" name="patient_id" id="patient_id" value=""
+						<input type="text" name="patient_id" id="patient_id" value="" 
 							placeholder="Please enter the same Patient ID as used on the patient consent form *" />
 					</div>
 				</div>
 				<!-- Break -->
 				<div class="row uniform">
 					<div class="12u 12u$(small)">
-						<label><span class="is-required">*</span>Corona Test </label>
-						<input type="radio" id="Positive" name="condition" checked>
+						<label><span class="is-required">*</span>Corona Test</label>
+						<input type="radio" id="Positive" name="condition" value="Positive" checked>
 						<label for="Positive">Positive</label>
 					</div>
 					<div class="12u 12u$(small)">
-						<input type="radio" id="Negative" name="condition">
+						<input type="radio" id="Negative" name="condition" value="Negative">
 						<label for="Negative">Negative</label>
 					</div>
 					<div class="12u$ 12u$(small)">
-						<input type="radio" id="not tested" name="condition">
+						<input type="radio" id="not tested" name="condition" value="Not tested">
 						<label for="not tested">Not tested</label>
 					</div>
 				</div>
 				<!-- Break -->
 				<div class="row uniform">
 					<div id="cough">
-						<label><span class="is-required">*</span>Record Cough:</label>
-						<button id="recordButton">Record</button>
-						<button id="pauseButton" disabled>Pause</button>
-						<button id="stopButton" disabled>Stop</button>
+					  <button id="recordButton">Record</button>
+					  <button id="pauseButton" disabled>Pause</button>
+					  <button id="stopButton" disabled>Stop</button>
 					</div>
-				</div>
-				<!-- Break -->
-				<div class="row uniform">
-					<div id="breath">
-						<label></label><h1>Record Breath: </h1>
-						<button id="recordButton">Record</button>
-						<button id="pauseButton" disabled>Pause</button>
-						<button id="stopButton" disabled>Stop</button>
-					</div>
-				</div>
+				  </div>
+				  <div id="formats">Format: start recording to see sample rate</div>
+				  <p><strong>Recordings:</strong></p>
+				  <ol id="recordingsList"></ol>
 				<!-- Break -->
 
 				<div class="row uniform"><br>
 					<label>Please upload 15-second video(s) of the patient's index fingertip pressed down on the
 						smartphone camera with flash turned on.<a href="javascript:;" onclick="show_instructions_video()">(instructions)</a> Optional</label>
 					<div class="6u 6u$(xsmall)">
-						<input type="file" name="patient_id" id="patient_id" value="" placeholder="patient id" />
+						<input type="file" name="video" id="video" type="file" placeholder="patient id" />
 					</div>
 				</div>
 				<!-- Break -->
@@ -160,32 +153,39 @@
 					<div class="6u 12u$(small)">
 						<label><span class="is-required">*</span>Patient Reported Symptoms </span><br><br>
 
-						<input type="checkbox" id="roundtrip1" name="reported_symptoms">
+						<input type="checkbox" id="roundtrip1" name="reported_symptoms"
+						value="Fever, chills, or sweating">
 						<label for="roundtrip1">Fever, chills, or sweating</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip2" name="reported_symptoms">
+						<input type="checkbox" id="roundtrip2" name="reported_symptoms"
+						value="Shortness of breath">
 						<label for="roundtrip2">Shortness of breath</label>
 
 						<br>
-						<input type="checkbox" id="roundtrip3" name="reported_symptoms">
+						<input type="checkbox" id="roundtrip3" name="reported_symptoms"
+						value="New or worsening cough">
 						<label for="roundtrip3"> New or worsening cough</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip4" name="reported_symptoms">
+						<input type="checkbox" id="roundtrip4" name="reported_symptoms"
+						value="Sore throat">
 						<label for="roundtrip4">Sore throat</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip9" name="reported_symptoms">
+						<input type="checkbox" id="roundtrip9" name="reported_symptoms"
+						value="Body aches">
 						<label for="roundtrip9">Body aches</label>
 
 						<br>
 
-						<input type="checkbox" id="roundtrip7" name="reported_symptoms">
+						<input type="checkbox" id="roundtrip7" name="reported_symptoms"
+						value="Loss of smell">
 						<label for="roundtrip7">Loss of smell</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip8" name="reported_symptoms">
+						<input type="checkbox" id="roundtrip8" name="reported_symptoms"
+						value="None">
 						<label for="roundtrip8">None</label>
 
 					</div>
@@ -196,32 +196,39 @@
 					<div class="6u 12u$(small)">
 						<label><span class="is-required">*</span>Medical History</label>
 
-						<input type="checkbox" id="roundtrip01" name="medical_history">
-						<label for="roundtrip01"> Asthma or chronic lung disease</label>
+						<input type="checkbox" id="roundtrip01" name="medical_history"
+						value="Asthma or chronic lung disease">
+						<label for="roundtrip01">Asthma or chronic lung disease</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip02" name="medical_history">
+						<input type="checkbox" id="roundtrip02" name="medical_history"
+						value="Pregnancy">
 						<label for="roundtrip02">Pregnancy</label>
 
 						<br>
-						<input type="checkbox" id="roundtrip03" name="medical_history">
+						<input type="checkbox" id="roundtrip03" name="medical_history"
+						value="Diabetes with complications">
 						<label for="roundtrip03">Diabetes with complications</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip04" name="medical_history">
+						<input type="checkbox" id="roundtrip04" name="medical_history"
+						value="Disease or conditions that make it harder to cough">
 						<label for="roundtrip04">Disease or conditions that make it harder to cough</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip09" name="medical_history">
+						<input type="checkbox" id="roundtrip09" name="medical_history"
+						value="Congestive heart failure">
 						<label for="roundtrip09">Congestive heart failure</label>
 
 						<br>
 
-						<input type="checkbox" id="roundtrip07" name="medical_history">
+						<input type="checkbox" id="roundtrip07" name="medical_history"
+						value="Extreme obesity">
 						<label for="roundtrip07">Extreme obesity</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip08" name="medical_history">
+						<input type="checkbox" id="roundtrip08" name="medical_history"
+						value="None">
 						<label for="roundtrip08">None</label>
 
 					</div>
@@ -238,11 +245,11 @@
 				<div class="row uniform"><br>
 					<div class="12u 12u$(small)">
 						<label><span class="is-required">*</span>Is the patient a smoker?</label>
-						<input type="radio" id="Y" name="smoker">
+						<input type="radio" id="Y" name="smoker" value="Yes">
 						<label for="Y">Yes</label>
 					</div>
 					<div class="12u 12u$(small)">
-						<input type="radio" id="N" name="smoker">
+						<input type="radio" id="N" name="smoker" value="No">
 						<label for="N">No</label>
 					</div>
 					<!-- Break -->
@@ -250,11 +257,11 @@
 					<div class="row uniform"><br>
 						<div class="12u 12u$(small)">
 							<label><span class="is-required">*</span>Patient Location </label>
-							<input type="radio" id="Home" name="location">
+							<input type="radio" id="Home" name="location" value="Home">
 							<label for="Home">Home</label>
 						</div>
 						<div class="12u 12u$(small)">
-							<input type="radio" id="Clinical Setting" name="location">
+							<input type="radio" id="Clinical Setting" name="location" value="Clinical Setting">
 							<label for="Clinical Setting">Clinical setting</label>
 						</div>
 						<!-- Break -->
@@ -328,6 +335,10 @@
 
 
 	</script>
+
+	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
