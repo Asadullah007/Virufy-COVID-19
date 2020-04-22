@@ -56,7 +56,7 @@
 		<div class="inner">
 			<form method="post" action="#">
 				<!-- Break -->
-				<label>"Has the patient given consent for participating in this research (link) ? * " </label>
+				<label><span style="color: red;">*</span> Has the patient given consent for participating in this research (link) ?   </label>
 				<div class="4u 12u$(small)">
 					<input type="radio" id="demo-priority-low" name="demo-priority" checked>
 					<label for="demo-priority-low">Yes</label>
@@ -149,8 +149,8 @@
 				<!-- Break -->
 
 				<div class="row uniform"><br>
-					<label>Please upload 15-second video(s) of the patient's index fingertip pressed down on the
-						smartphone camera with flash turned on.(instructions) Optional</label>
+					<label><span style="color: red;">*</span> Please upload 15-second video(s) of the patient's index fingertip pressed down on the
+						smartphone camera with flash turned on.<a href="javascript:;" onclick="show_instructions_video()">(instructions)</a> Optional</label>
 					<div class="6u 6u$(xsmall)">
 						<input type="file" name="patient_id" id="patient_id" value="" placeholder="patient id" />
 					</div>
@@ -158,7 +158,7 @@
 				<!-- Break -->
 				<div class="row uniform">
 					<div class="6u 12u$(small)">
-						<span class="form-label">Patient Reported Symptoms * </span><br><br>
+						<span class="form-label"><span style="color: red;">*</span>Patient Reported Symptoms </span><br><br>
 
 						<input type="checkbox" id="roundtrip1" name="flight-type">
 						<label for="roundtrip1">Fever, chills, or sweating</label>
@@ -194,7 +194,7 @@
 				<!-- Break -->
 				<div class="row uniform">
 					<div class="6u 12u$(small)">
-						<span class="form-label">Medical History * </span><br><br>
+						<span class="form-label"><span style="color: red;">*</span>Medical History</span><br><br>
 
 						<input type="checkbox" id="roundtrip01" name="flight-type">
 						<label for="roundtrip01"> Asthma or chronic lung disease</label>
@@ -227,7 +227,7 @@
 					</div>
 				</div>
 
-				<div>
+				<div><br>
 					<button onclick="show_instructions()" type="button">
 						Hello
 					</button>
@@ -236,7 +236,7 @@
 				<!-- Break -->
 				<!-- Break -->
 				<div class="row uniform"><br>
-					<label>Is the patient a smoker? * </label>
+					<label><span style="color: red;">*</span>Is the patient a smoker?</label>
 					<div class="12u 12u$(small)">
 						<input type="radio" id="Y" name="demo-priority2">
 						<label for="Y">Yes</label>
@@ -248,7 +248,7 @@
 					<!-- Break -->
 					<!-- Break -->
 					<div class="row uniform"><br>
-						<label>Patient Location * </label>
+						<label><span style="color: red;">*</span>Patient Location </label>
 						<div class="12u 12u$(small)">
 							<input type="radio" id="Home" name="demo-priority2">
 							<label for="Home">Home</label>
@@ -316,6 +316,16 @@
 				confirmButtonText: "Let's, do this!",
 			});
 		}
+		function show_instructions_video() {
+			swal({
+				title: "Instructions - Video Record <p style='font-size : 20px' >(1) wipe the fingertip with alcohol<br> (2) press the fingertip lightly onto the smartphone camera such that the entire lens is covered, as show below </p> ",
+
+				text: "<img src='images/videoInstructions.png' alt='test' class='modal-instructions'/>",
+				html: true,
+				button: "Ok"
+			});
+		}
+
 
 	</script>
 </body>
