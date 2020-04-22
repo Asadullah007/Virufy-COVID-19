@@ -58,11 +58,11 @@
 				<!-- Break -->
 				<label><span class="is-required">*</span>Has the patient given consent for participating in this research (link) ?   </label>
 				<div class="4u 12u$(small)">
-					<input type="radio" id="demo-priority-low" name="consent" checked>
+					<input type="radio" id="demo-priority-low" name="research_consent" checked>
 					<label for="demo-priority-low">Yes</label>
 				</div>
 				<div class="4u 12u$(small)">
-					<input type="radio" id="demo-priority-normal" name="consent">
+					<input type="radio" id="demo-priority-normal" name="research_consent">
 					<label for="demo-priority-normal">No</label>
 				</div>
 				<!-- Break -->
@@ -75,8 +75,6 @@
 				<div class="row uniform">
 					<div class="12u 12u$(small)">
 						<label><span class="is-required">*</span>Gender</label>
-					</div>
-					<div class="12u 12u$(small)">
 						<input type="radio" id="male" name="gender" checked>
 						<label for="male">Male</label>
 					</div>
@@ -96,10 +94,10 @@
 						<label><span class="is-required">*</span>Country</label>
 						<div class="select-wrapper">
 							<select name="country" id="demo-category" placeholder="Select a Country">
-								<option value="">- Country -</option>
-								<option value="1">Pakistan</option>
-								<option value="1">Japan</option>
-								<option value="1">USA</option>
+								<option value="Country">- Country -</option>
+								<option value="Pakistan">Pakistan</option>
+								<option value="Japan">Japan</option>
+								<option value="USA">USA</option>
 							</select>
 						</div>
 					</div>
@@ -118,15 +116,15 @@
 				<div class="row uniform">
 					<div class="12u 12u$(small)">
 						<label><span class="is-required">*</span>Corona Test </label>
-						<input type="radio" id="Positive" name="corona-test" checked>
+						<input type="radio" id="Positive" name="condition" checked>
 						<label for="Positive">Positive</label>
 					</div>
 					<div class="12u 12u$(small)">
-						<input type="radio" id="Negative" name="corona-test">
+						<input type="radio" id="Negative" name="condition">
 						<label for="Negative">Negative</label>
 					</div>
 					<div class="12u$ 12u$(small)">
-						<input type="radio" id="not tested" name="corona-test">
+						<input type="radio" id="not tested" name="condition">
 						<label for="not tested">Not tested</label>
 					</div>
 				</div>
@@ -162,32 +160,32 @@
 					<div class="6u 12u$(small)">
 						<label><span class="is-required">*</span>Patient Reported Symptoms </span><br><br>
 
-						<input type="checkbox" id="roundtrip1" name="symptoms">
+						<input type="checkbox" id="roundtrip1" name="reported_symptoms">
 						<label for="roundtrip1">Fever, chills, or sweating</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip2" name="symptoms">
+						<input type="checkbox" id="roundtrip2" name="reported_symptoms">
 						<label for="roundtrip2">Shortness of breath</label>
 
 						<br>
-						<input type="checkbox" id="roundtrip3" name="symptoms">
+						<input type="checkbox" id="roundtrip3" name="reported_symptoms">
 						<label for="roundtrip3"> New or worsening cough</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip4" name="symptoms">
+						<input type="checkbox" id="roundtrip4" name="reported_symptoms">
 						<label for="roundtrip4">Sore throat</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip9" name="symptoms">
+						<input type="checkbox" id="roundtrip9" name="reported_symptoms">
 						<label for="roundtrip9">Body aches</label>
 
 						<br>
 
-						<input type="checkbox" id="roundtrip7" name="symptoms">
+						<input type="checkbox" id="roundtrip7" name="reported_symptoms">
 						<label for="roundtrip7">Loss of smell</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip8" name="symptoms">
+						<input type="checkbox" id="roundtrip8" name="reported_symptoms">
 						<label for="roundtrip8">None</label>
 
 					</div>
@@ -198,32 +196,32 @@
 					<div class="6u 12u$(small)">
 						<label><span class="is-required">*</span>Medical History</label>
 
-						<input type="checkbox" id="roundtrip01" name="medical-history">
+						<input type="checkbox" id="roundtrip01" name="medical_history">
 						<label for="roundtrip01"> Asthma or chronic lung disease</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip02" name="medical-history">
+						<input type="checkbox" id="roundtrip02" name="medical_history">
 						<label for="roundtrip02">Pregnancy</label>
 
 						<br>
-						<input type="checkbox" id="roundtrip03" name="medical-history">
+						<input type="checkbox" id="roundtrip03" name="medical_history">
 						<label for="roundtrip03">Diabetes with complications</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip04" name="medical-history">
+						<input type="checkbox" id="roundtrip04" name="medical_history">
 						<label for="roundtrip04">Disease or conditions that make it harder to cough</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip09" name="medical-history">
+						<input type="checkbox" id="roundtrip09" name="medical_history">
 						<label for="roundtrip09">Congestive heart failure</label>
 
 						<br>
 
-						<input type="checkbox" id="roundtrip07" name="medical-history">
+						<input type="checkbox" id="roundtrip07" name="medical_history">
 						<label for="roundtrip07">Extreme obesity</label>
 						<br>
 
-						<input type="checkbox" id="roundtrip08" name="medical-history">
+						<input type="checkbox" id="roundtrip08" name="medical_history">
 						<label for="roundtrip08">None</label>
 
 					</div>
