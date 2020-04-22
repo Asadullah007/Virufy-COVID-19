@@ -3429,3 +3429,9 @@ img.virufy-image {
 	width: 95vw;
 	overflow-y: auto !important;
 }
+
+/* app -> Asterisk symbols for requried questions */
+.is-required {
+	color: red;
+	padding-right: 4px;
+}
