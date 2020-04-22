@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title>Virufy - App</title>
 
@@ -11,282 +12,277 @@
 
 	<link rel="stylesheet" href="assets/css/main.css" />
 
+	<!--Sweet Alert-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" rel="stylesheet" />
+
 	<!-- Favicon -->
 	<link rel="icon" href="images/logo.png" type="image/x-icon" />
 
 </head>
+
 <body>
 
-		<!-- Header -->
-		<header id="header">
-			<div class="inner">
-				<a href="index.html" class="logo">
-					<img src="images/logo.png">
-				</a>
-				<nav id="nav">
-					<a href="index.html">Home</a>
-					<a href="./index.html#about">About</a>
-					<a href="./team.html">Team</a>
-					<a href="./index.html#sponsors">Sponsors</a>
-					<a href="./index.html#collaborators">Collaborators</a>
-					<a href="./app.html">App</a>
-					<a href="#contact">Contact</a>
-				</nav>
-				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-			</div>
-		</header>
-		
-		<!-- Banner - Message and icon -->
-		<section id="banner">
-			<div class="inner">
-				<header>
-					<h1>Record Cough</h1>
-					<p><i class="fa fa-question-circle fa-3x"></i></p>
-					<p></p>
-					<i id="record-btn" class="fa fa-head-side-cough fa-5x"></i>
-				</header>
-			</div>
-		</section>
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="index.html" class="logo">
+				<img src="images/logo.png">
+			</a>
+			<nav id="nav">
+				<a href="https://virufy.org">Home</a>
+				<a href="https://virufy.org/index.html#about">About</a>
+				<a href="https://virufy.org/team.html">Team</a>
+				<a href="https://virufy.org/index.html#sponsors">Sponsors</a>
+				<a href="https://virufy.org/index.html#collaborators">Collaborators</a>
+				<a href="http://cough.sabae.cc/">App</a>
+				<a href="#contact">Contact</a>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
 
-		<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Virufy COVID-19</h2>
-						<p>Please take a few minutes to send us your cough sounds to help verify Coronavirus! </p>
-					</header>
+	<!-- Banner - Message and icon -->
+	<section id="banner">
+		<div class="inner">
+			<header>
+				<h1>Record Cough</h1>
+				<p><i class="fa fa-question-circle fa-3x"></i></p>
+				<p></p>
+			</header>
+		</div>
+	</section>
 
-				
-					
-					<hr class="major" />
-					<form method="post" action="#">
-								<!-- Form -->
-									<h3>Virufy COVID-</h3>
-
-									<!-- Break -->
-									<label>"Has the patient given consent for participating in this research (link) ? * " </label>
-									<div class="4u 12u$(small)">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Yes</label>
-									</div>
-									<div class="4u 12u$(small)">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">No</label>
-									</div>
-									<!-- Break -->
-									<div class="row uniform">
-										<div class="6u 12u$(xsmall)">
-											<input type="text" name="age" id="age" value="" placeholder="Age" />
-										</div>
-									</div>
-									<!-- Break -->
-								<div class="row uniform">
-									<label>Gender</label>
-									<div class="12u 12u$(small)">
-										<input type="radio" id="male" name="demo-priority" checked>
-										<label for="male">Male</label>
-									</div>
-									<div class="12u 12u$(small)">
-										<input type="radio" id="female" name="demo-priority">
-										<label for="female">Female</label>
-									</div>
-									<div class="12u$ 12u$(small)">
-										<input type="radio" id="other" name="demo-priority">
-										<label for="other">Other</label>
-									</div>
-								</div>
-									<!-- Break -->
-									<!-- Break -->
-									<div class="row uniform">
-									<div class="6u$">
-										<div class="select-wrapper">
-											<select name="demo-category" id="demo-category">
-												<option value="">- Country -</option>
-												<option value="1">Pakistan</option>
-												<option value="1">Japan</option>
-												<option value="1">USA</option>
-											</select>
-										</div>
-									</div>
-								</div>
-									<!-- Break -->
-                                    <!-- Break -->
-									
-										<div class="row uniform">
-											
-											<div class="6u 12u$(small)">
-												<input type="text" name="patient_id" id="patient_id" value="" placeholder="Please enter the same Patient ID as used on the patient consent form *" />
-											</div>
-										</div>
-									<!-- Break -->
-										<!-- Break -->
-								<div class="row uniform">
-									<label>Corona Test </label>
-									<div class="12u 12u$(small)">
-										<input type="radio" id="Positive" name="demo-priority2" checked>
-										<label for="Positive">Positive</label>
-									</div>
-									<div class="12u 12u$(small)">
-										<input type="radio" id="Negative" name="demo-priority2">
-										<label for="Negative">Negative</label>
-									</div>
-									<div class="12u$ 12u$(small)">
-										<input type="radio" id="not tested" name="demo-priority2">
-										<label for="not tested">Not tested</label>
-									</div>
-								</div>
-								<!-- Break -->
-								<div class="row uniform">
-								<div id="cough">
-									<button id="recordButton">Record</button>
-									<button id="pauseButton" disabled>Pause</button>
-									<button id="stopButton" disabled>Stop</button>
-								 </div>
-								</div>
-								 <!-- Break -->
-								 <div class="row uniform">
-									<div id="breath">
-										<button id="recordButton">Record</button>
-										<button id="pauseButton" disabled>Pause</button>
-										<button id="stopButton" disabled>Stop</button>
-									 </div>
-									</div>
-									 <!-- Break -->
-									
-									
-								 <div class="row uniform"><br>
-									 <label>Please upload 15-second video(s) of the patient's index fingertip pressed down on the smartphone camera with flash turned on.(instructions) Optional</label>
-									<div class="6u 6u$(xsmall)">
-										<input type="file" name="patient_id" id="patient_id" value="" placeholder="patient id" />
-									</div>
-								</div>
-							<!-- Break -->
-							<div class="row uniform">
-								<div class="6u 12u$(small)">
-								<span class="form-label">Patient Reported Symptoms * </span><br><br>
-                                       
-										<input type="checkbox" id="roundtrip1" name="flight-type" >
-												<label for="roundtrip1">Fever, chills, or sweating</label>
-										<br>
-                                        
-										<input type="checkbox" id="roundtrip2" name="flight-type">
-										<label for="roundtrip2">Shortness of breath</label>
-								
-										<br>
-										<input type="checkbox" id="roundtrip3" name="flight-type">
-												<label for="roundtrip3"> New or worsening cough</label>
-												<br>
-                                        
-												<input type="checkbox" id="roundtrip4" name="flight-type">
-												<label for="roundtrip4">Sore throat</label>
-												<br>
-                                        
-												<input type="checkbox" id="roundtrip9" name="flight-type">
-												<label for="roundtrip9">Body aches</label>
-											
-																				
-										
-										<br>
-                                        
-										<input type="checkbox" id="roundtrip7" name="flight-type">
-										<label for="roundtrip7">Loss of smell</label>
-										<br>
-                                        
-										<input type="checkbox" id="roundtrip8" name="flight-type">
-										<label for="roundtrip8">None</label>
-								
-										
-									</div>
-							</div>
-							<!-- Break -->
-														<!-- Break -->
-														<div class="row uniform">
-															<div class="6u 12u$(small)">
-															<span class="form-label">Medical History * </span><br><br>
-																   
-																	<input type="checkbox" id="roundtrip01" name="flight-type" >
-																			<label for="roundtrip01"> Asthma or chronic lung disease</label>
-																	<br>
-																	
-																	<input type="checkbox" id="roundtrip02" name="flight-type">
-																	<label for="roundtrip02">Pregnancy</label>
-															
-																	<br>
-																	<input type="checkbox" id="roundtrip03" name="flight-type">
-																			<label for="roundtrip03">Diabetes with complications</label>
-																			<br>
-																	
-																			<input type="checkbox" id="roundtrip04" name="flight-type">
-																			<label for="roundtrip04">Disease or conditions that make it harder to cough</label>
-																			<br>
-																	
-																			<input type="checkbox" id="roundtrip09" name="flight-type">
-																			<label for="roundtrip09">Congestive heart failure</label>
-																		
-																											
-																	
-																	<br>
-																	
-																	<input type="checkbox" id="roundtrip07" name="flight-type">
-																	<label for="roundtrip07">Extreme obesity</label>
-																	<br>
-																	
-																	<input type="checkbox" id="roundtrip08" name="flight-type">
-																	<label for="roundtrip08">None</label>
-															
-																	
-																</div>
-														</div>
+	<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Virufy COVID-19</h2>
+				<p>Please take a few minutes to send us your cough sounds to help verify Coronavirus! </p>
+			</header>
 
 
-									<!-- Break -->
-                                		<!-- Break -->
-								<div class="row uniform"><br>
-									<label>Is the patient a smoker? * </label>
-									<div class="12u 12u$(small)">
-										<input type="radio" id="Y" name="demo-priority2">
-										<label for="Y">Yes</label>
-									</div>
-									<div class="12u 12u$(small)">
-										<input type="radio" id="N" name="demo-priority2">
-										<label for="N">No</label>
-								</div>
-								<!-- Break -->
-										<!-- Break -->
-										<div class="row uniform"><br>
-											<label>Patient Location * </label>
-											<div class="12u 12u$(small)">
-												<input type="radio" id="Home" name="demo-priority2">
-												<label for="Home">Home</label>
-											</div>
-											<div class="12u 12u$(small)">
-												<input type="radio" id="Clinical Setting" name="demo-priority2">
-												<label for="Clinical Setting">Clinical setting</label>
-										</div>
-										<!-- Break -->
-										
-											
-											<!-- Break -->
-											<div class="12u$">
-												<ul class="actions">
-													<li><input type="button" value="Submit" onclick="submit_data()" /></li>
-													<li><input type="reset" value="Reset" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
 
-									<hr />
+			<hr class="major" />
+			<form method="post" action="#">
+				<!-- Form -->
+				<h3>Virufy COVID-</h3>
 
-																	
-</code></pre>
-
+				<!-- Break -->
+				<label>"Has the patient given consent for participating in this research (link) ? * " </label>
+				<div class="4u 12u$(small)">
+					<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+					<label for="demo-priority-low">Yes</label>
+				</div>
+				<div class="4u 12u$(small)">
+					<input type="radio" id="demo-priority-normal" name="demo-priority">
+					<label for="demo-priority-normal">No</label>
+				</div>
+				<!-- Break -->
+				<div class="row uniform">
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="age" id="age" value="" placeholder="Age" />
+					</div>
+				</div>
+				<!-- Break -->
+				<div class="row uniform">
+					<label>Gender</label>
+					<div class="12u 12u$(small)">
+						<input type="radio" id="male" name="demo-priority" checked>
+						<label for="male">Male</label>
+					</div>
+					<div class="12u 12u$(small)">
+						<input type="radio" id="female" name="demo-priority">
+						<label for="female">Female</label>
+					</div>
+					<div class="12u$ 12u$(small)">
+						<input type="radio" id="other" name="demo-priority">
+						<label for="other">Other</label>
+					</div>
+				</div>
+				<!-- Break -->
+				<!-- Break -->
+				<div class="row uniform">
+					<div class="6u$">
+						<div class="select-wrapper">
+							<select name="demo-category" id="demo-category">
+								<option value="">- Country -</option>
+								<option value="1">Pakistan</option>
+								<option value="1">Japan</option>
+								<option value="1">USA</option>
+							</select>
 						</div>
 					</div>
+				</div>
+				<!-- Break -->
+				<!-- Break -->
 
+				<div class="row uniform">
+
+					<div class="6u 12u$(small)">
+						<input type="text" name="patient_id" id="patient_id" value=""
+							placeholder="Please enter the same Patient ID as used on the patient consent form *" />
+					</div>
+				</div>
+				<!-- Break -->
+				<!-- Break -->
+				<div class="row uniform">
+					<label>Corona Test </label>
+					<div class="12u 12u$(small)">
+						<input type="radio" id="Positive" name="demo-priority2" checked>
+						<label for="Positive">Positive</label>
+					</div>
+					<div class="12u 12u$(small)">
+						<input type="radio" id="Negative" name="demo-priority2">
+						<label for="Negative">Negative</label>
+					</div>
+					<div class="12u$ 12u$(small)">
+						<input type="radio" id="not tested" name="demo-priority2">
+						<label for="not tested">Not tested</label>
+					</div>
+				</div>
+				<!-- Break -->
+				<div class="row uniform">
+					<div id="cough">
+						<button id="recordButton">Record</button>
+						<button id="pauseButton" disabled>Pause</button>
+						<button id="stopButton" disabled>Stop</button>
+					</div>
+				</div>
+				<!-- Break -->
+				<div class="row uniform">
+					<div id="breath">
+						<button id="recordButton">Record</button>
+						<button id="pauseButton" disabled>Pause</button>
+						<button id="stopButton" disabled>Stop</button>
+					</div>
+				</div>
+				<!-- Break -->
+
+				<div class="row uniform"><br>
+					<label>Please upload 15-second video(s) of the patient's index fingertip pressed down on the
+						smartphone camera with flash turned on.(instructions) Optional</label>
+					<div class="6u 6u$(xsmall)">
+						<input type="file" name="patient_id" id="patient_id" value="" placeholder="patient id" />
+					</div>
+				</div>
+				<!-- Break -->
+				<div class="row uniform">
+					<div class="6u 12u$(small)">
+						<span class="form-label">Patient Reported Symptoms * </span><br><br>
+
+						<input type="checkbox" id="roundtrip1" name="flight-type">
+						<label for="roundtrip1">Fever, chills, or sweating</label>
+						<br>
+
+						<input type="checkbox" id="roundtrip2" name="flight-type">
+						<label for="roundtrip2">Shortness of breath</label>
+
+						<br>
+						<input type="checkbox" id="roundtrip3" name="flight-type">
+						<label for="roundtrip3"> New or worsening cough</label>
+						<br>
+
+						<input type="checkbox" id="roundtrip4" name="flight-type">
+						<label for="roundtrip4">Sore throat</label>
+						<br>
+
+						<input type="checkbox" id="roundtrip9" name="flight-type">
+						<label for="roundtrip9">Body aches</label>
+
+						<br>
+
+						<input type="checkbox" id="roundtrip7" name="flight-type">
+						<label for="roundtrip7">Loss of smell</label>
+						<br>
+
+						<input type="checkbox" id="roundtrip8" name="flight-type">
+						<label for="roundtrip8">None</label>
+
+					</div>
+				</div>
+				<!-- Break -->
+				<!-- Break -->
+				<div class="row uniform">
+					<div class="6u 12u$(small)">
+						<span class="form-label">Medical History * </span><br><br>
+
+						<input type="checkbox" id="roundtrip01" name="flight-type">
+						<label for="roundtrip01"> Asthma or chronic lung disease</label>
+						<br>
+
+						<input type="checkbox" id="roundtrip02" name="flight-type">
+						<label for="roundtrip02">Pregnancy</label>
+
+						<br>
+						<input type="checkbox" id="roundtrip03" name="flight-type">
+						<label for="roundtrip03">Diabetes with complications</label>
+						<br>
+
+						<input type="checkbox" id="roundtrip04" name="flight-type">
+						<label for="roundtrip04">Disease or conditions that make it harder to cough</label>
+						<br>
+
+						<input type="checkbox" id="roundtrip09" name="flight-type">
+						<label for="roundtrip09">Congestive heart failure</label>
+
+						<br>
+
+						<input type="checkbox" id="roundtrip07" name="flight-type">
+						<label for="roundtrip07">Extreme obesity</label>
+						<br>
+
+						<input type="checkbox" id="roundtrip08" name="flight-type">
+						<label for="roundtrip08">None</label>
+
+					</div>
 				</div>
 
-			</section>
+				<div>
+					<button onclick="show_instructions()" type="button">
+						Hello
+					</button>
+				</div>
+
+				<!-- Break -->
+				<!-- Break -->
+				<div class="row uniform"><br>
+					<label>Is the patient a smoker? * </label>
+					<div class="12u 12u$(small)">
+						<input type="radio" id="Y" name="demo-priority2">
+						<label for="Y">Yes</label>
+					</div>
+					<div class="12u 12u$(small)">
+						<input type="radio" id="N" name="demo-priority2">
+						<label for="N">No</label>
+					</div>
+					<!-- Break -->
+					<!-- Break -->
+					<div class="row uniform"><br>
+						<label>Patient Location * </label>
+						<div class="12u 12u$(small)">
+							<input type="radio" id="Home" name="demo-priority2">
+							<label for="Home">Home</label>
+						</div>
+						<div class="12u 12u$(small)">
+							<input type="radio" id="Clinical Setting" name="demo-priority2">
+							<label for="Clinical Setting">Clinical setting</label>
+						</div>
+						<!-- Break -->
+
+
+						<!-- Break -->
+						<div class="12u$">
+							<ul class="actions">
+								<li><input type="button" value="Submit" onclick="submit_data()" /></li>
+								<li><input type="reset" value="Reset" /></li>
+							</ul>
+						</div>
+					</div>
+			</form>
+			<hr />
+		</div>
+
+	</section>
 
 	<!-- Footer -->
 	<footer id="footer">
@@ -305,21 +301,33 @@
 		</div>
 	</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
-<script>
-	function submit_data(){
-		swal({
-								  title: "Thank You!",
-								  text: "Your Message has  been received , we will contact soon!",
-								  icon: "success",
-								  button: "Ok",
-								});
-	}
-</script>
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+	<script>
+		function submit_data() {
+			swal({
+				title: "Thank You!",
+				text: "Your Message has  been received , we will contact soon!",
+				icon: "success",
+				button: "Ok",
+			});
+		}
+
+		function show_instructions() {
+			swal({
+				title: "Testing",
+				text: "",
+				html: true,
+				icon: "success",
+				button: "let's do this!"
+			});
+		}
+
+	</script>
+</body>
+
 </html>
