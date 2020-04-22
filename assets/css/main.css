@@ -3435,3 +3435,14 @@ img.virufy-image {
 	color: red;
 	padding-right: 4px;
 }
+
+/*instructions CSS*/
+#cough i:hover {
+	color: #6cc091;
+	cursor: pointer;
+}
+
+#cough i:focus {
+	color: #6cc091;
+	cursor: pointer;
+}
