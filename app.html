@@ -1,13 +1,8 @@
 <!DOCTYPE HTML>
-<!--
-	Projection by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 
 <head>
-	<title>VIRUFY</title>
+	<title>Virufy - App</title>
 
 	<!-- Metatags -->
 	<meta charset="utf-8" />
@@ -17,7 +12,7 @@
 
 	<link rel="stylesheet" href="assets/css/main.css" />
 
-	<!-- Sweet Alert -->
+	<!--Sweet Alert-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" rel="stylesheet" />
 
 	<!-- Favicon -->
@@ -46,6 +41,17 @@
 		</div>
 	</header>
 
+	<!-- Banner - Message and icon -->
+	<section id="banner">
+		<div class="inner">
+			<header>
+				<h1>Record Cough</h1>
+				<p><i class="fa fa-question-circle fa-3x"></i></p>
+				<p></p>
+			</header>
+		</div>
+	</section>
+
 	<!-- Main -->
 	<section id="main" class="wrapper">
 		<div class="inner">
@@ -53,6 +59,8 @@
 				<h2>Virufy COVID-19</h2>
 				<p>Please take a few minutes to send us your cough sounds to help verify Coronavirus! </p>
 			</header>
+
+
 
 			<hr class="major" />
 			<form method="post" action="#">
@@ -150,7 +158,6 @@
 				</div>
 				<!-- Break -->
 
-
 				<div class="row uniform"><br>
 					<label>Please upload 15-second video(s) of the patient's index fingertip pressed down on the
 						smartphone camera with flash turned on.(instructions) Optional</label>
@@ -190,6 +197,7 @@
 
 						<input type="checkbox" id="roundtrip8" name="flight-type">
 						<label for="roundtrip8">None</label>
+
 					</div>
 				</div>
 				<!-- Break -->
@@ -229,6 +237,12 @@
 					</div>
 				</div>
 
+				<div>
+					<button onclick="show_instructions()" type="button">
+						Hello
+					</button>
+				</div>
+
 				<!-- Break -->
 				<!-- Break -->
 				<div class="row uniform"><br>
@@ -254,6 +268,7 @@
 							<label for="Clinical Setting">Clinical setting</label>
 						</div>
 						<!-- Break -->
+
 
 						<!-- Break -->
 						<div class="12u$">
@@ -299,6 +314,16 @@
 				text: "Your Message has  been received , we will contact soon!",
 				icon: "success",
 				button: "Ok",
+			});
+		}
+
+		function show_instructions() {
+			swal({
+				title: "Testing",
+				text: "",
+				html: true,
+				icon: "success",
+				button: "let's do this!"
 			});
 		}
 
