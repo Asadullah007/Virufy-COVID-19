@@ -29,7 +29,7 @@ function startRecording() {
   var constraints = { audio: true, video: false };
 
   /*
-    	Disable the record button until we get a success or fail from getUserMedia() 
+    	Disable the record button until we get a success or fail from getUserMedia()
 	*/
 
   recordButton.disabled = true;
@@ -37,7 +37,7 @@ function startRecording() {
   pauseButton.disabled = false;
 
   /*
-    	We're using the standard promise based getUserMedia() 
+    	We're using the standard promise based getUserMedia()
     	https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
 	*/
 
@@ -66,7 +66,7 @@ function startRecording() {
       /* use the stream */
       input = audioContext.createMediaStreamSource(stream);
 
-      /* 
+      /*
 			Create the Recorder object and configure to record mono sound (1 channel)
 			Recording 2 channels  will double the file size
 		*/
@@ -168,7 +168,7 @@ function createDownloadLink(blob) {
     //   }
     // };
     event.preventDefault();
-    
+
     var fd = new FormData(form);
     fd.append("cough_audio", blob_arr[0], filename + ".wav");
     fd.append("breath_audio", blob_arr[1], filename + ".wav");
@@ -179,7 +179,7 @@ function createDownloadLink(blob) {
 
     fetch("http://localhost:3000/add_user", {
       method: "POST",
-      body: fd,    
+      body: fd,
     }).then(function (response) {
       return response.text();
     }).then(function (text) {

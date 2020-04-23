@@ -54,7 +54,7 @@
 	<!-- Main -->
 	<section id="main" class="wrapper">
 		<div class="inner">
-			<form method="POST" enctype="multipart/form-data" action="#">
+			<form method="POST" enctype="multipart/form-data" id="myForm">
 				<!-- Break -->
 				<label><span class="is-required">*</span>Has the patient given consent for participating in this
 					research (link) ? </label>
@@ -145,8 +145,8 @@
 
 				<div class="row uniform"><br>
 					<label>Please upload 15-second video(s) of the patient's index fingertip pressed down on the
-						smartphone camera with flash turned on.<a href="javascript:;"
-							onclick="show_instructions_video()">(instructions)</a> Optional</label>
+						smartphone camera with flash turned on.<span
+							onclick="show_instructions_video()">(instructions)</span> Optional</label>
 					<div class="6u 6u$(xsmall)">
 						<input type="file" name="video" id="video" type="file" placeholder="patient id" />
 					</div>
@@ -258,7 +258,7 @@
 						<!-- Break -->
 						<div class="12u$">
 							<ul class="actions">
-								<li><input type="button" value="Submit" onclick="submit_data()" /></li>
+								<li><input type="button" value="Submit" id="submit" onclick="submit_data()" /></li>
 								<li><input type="reset" value="Reset" /></li>
 							</ul>
 						</div>
@@ -294,10 +294,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
 	<script>
 		function submit_data() {
+			console.log("submitting");
+			const msg = "Your Message has  been received , we will contact soon!";
 			swal({
 				title: "Thank You!",
-				text: "Your Message has  been received , we will contact soon!",
-				icon: "success",
+				text: msg,
 				button: "Ok"
 			});
 		}
@@ -305,7 +306,7 @@
 		function show_instructions() {
 			swal({
 				title: "Instructions - Record Cough",
-				text: "<img src='images/instructions.jpg' alt='test' class='modal-instructions'/>",
+				text: "<img src='images/instructions.jpg' alt='instructions' class='modal-instructions'/>",
 				html: true,
 				confirmButtonClass: "button",
 				confirmButtonText: "Let's, do this!",
@@ -314,9 +315,8 @@
 
 		function show_instructions_video() {
 			swal({
-				title: "Instructions - Video Record <p style='font-size : 20px' >(1) wipe the fingertip with alcohol<br> (2) press the fingertip lightly onto the smartphone camera such that the entire lens is covered, as show below </p> ",
-
-				text: "<img src='images/videoInstructions.png' alt='test' class='modal-instructions'/>",
+				title: "Instructions - Video Record ",
+				text: "<p>(1) wipe the fingertip with alcohol<br> (2) press the fingertip lightly onto the smartphone camera such that the entire lens is covered, as show below </p><br><img src='images/videoInstructions.png' alt='video instructions' class='modal-instructions'/>",
 				html: true,
 				button: "Ok"
 			});
@@ -326,7 +326,7 @@
 
 	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
 	<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
-	<script src="js/app.js"></script>
+	<script src="assets/js/app.js"></script>
 </body>
 
 </html>
