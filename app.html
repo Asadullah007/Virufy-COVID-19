@@ -301,6 +301,24 @@
 	<script src="assets/js/main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
 	<script>
+
+		// Add event listener to execute callback function when the page's HTML, CSS, Scripts have loaded
+		window.addEventListener('load', () => {
+			// Define content for the modal's message
+			formURL = "https://forms.gle/F2J3WgaHmU91S3yz9"
+			formHTML = "<a href='" + formURL + "' target='_blank'>consent form.</a>" 
+			textHTML = "Before proceeding, please confirm you have read the " + formHTML + " and that you agree to the terms and conditions of the study.";
+
+			// Launch a modal with a link to the consent form. User can't proceed until they click "I agree".
+			swal({
+				title: 'Consent Form', 
+				text: textHTML,
+				html: true,
+				confirmButtonClass: 'button',
+				confirmButtonText: "I agree", 
+			});
+		});
+
 		function submit_data() {
 			console.log("submitting");
 			const msg = "Your Message has  been received , we will contact soon!";
