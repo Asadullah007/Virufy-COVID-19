@@ -143,15 +143,18 @@
 					</div>
 				</div>
 				<div id="formats">Format: start recording to see sample rate</div>
-				<label>Recorded Files:</label>
+				<span style="color: #6cc091">Recorded Files</span>
 				<ol id="recordingsList"></ol>
 				<!-- Break -->
 
 				<div class="row uniform"><br>
-					<label>Please upload 15-second video(s) of the patient's index fingertip pressed down on the
-						smartphone camera with flash turned on.<span onclick="show_instructions_video()"
-							id="video-instructions">(instructions)</span> Optional</label>
-					<div class="6u 6u$(xsmall)">
+					<label>Upload Fingertip Video <span style="color: #6cc091">(Optional)</span></label>
+					<div class="12u 12u$(small)">
+						<p style="display: block">Please upload 15-second video(s) of the patient's index fingertip pressed down on the
+							smartphone camera with flash turned on.</p>
+					</div>
+					<div class="12u 12u$(xsmall)">
+						<i id="video-instructions" class="fa fa-question-circle fa-3x" onclick="show_instructions_video()"></i>
 						<input type="file" name="video" id="video" type="file" placeholder="patient id" />
 					</div>
 				</div>
