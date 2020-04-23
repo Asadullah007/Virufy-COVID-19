@@ -3453,3 +3453,12 @@ img.virufy-image {
 	color: #6cc091;
 	cursor: pointer;
 }
+
+#video-instructions {
+	color: black;
+}
+
+#video-instructions:hover {
+	color: #6cc091;
+	cursor: pointer;
+}
