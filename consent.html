@@ -78,7 +78,7 @@
                     <form id="consent-form" method="POST" action="#">
                         <!-- 18 or Older -->
                         <div>
-                            <h4>Please verify if you are 18 years or older.</h4>
+                            <h4><span class="is-required">*</span>Please verify if you are 18 years or older.</h4>
                             <div class=" 4u 12u$(small)">
                                 <input type="radio" id="verify-18" name="verify-18" checked required>
                                 <label for="verify-18">Yes</label>
@@ -87,7 +87,7 @@
 
                         <!-- Patient's Name -->
                         <div>
-                        <h4>Patient's Full Name</h4>
+                            <h4><span class="is-required">*</span>Patient's Full Name</h4>
                             <div class="6u 12u$(small)">
                                 <p>Enter your name [first name, father's name (surname)]</p>
                                 <input type="text" name="patient-name" id="patient-name" value="" placeholder="First Name, Surname" required/>
@@ -96,12 +96,13 @@
 
                         <!-- Patient's Name -->
                         <div>
-                            <h4>Patient ID</h4>
+                            <h4><span class="is-required">*</span>Patient ID</h4>
                             <p>This will be provided by the data collection staff and will be something like DMC-000001</p>
                             <div class="6u 12u$(small)">
                                 <input type="text" name="patient-ID" id="patient-ID" value="" placeholder="DMC-000001" required/>
                             </div>
                         </div>
+
 
                         <!-- Why is this study being done? -->
                         <div class="consent-form-section">
@@ -272,7 +273,7 @@
 
                         <!-- FORM INPUT: Agree to participate -->
                         <div class="consent-form-section">
-                            <h4>I agree to participate in this study.</h4>
+                            <h4><span class="is-required">*</span>I agree to participate in this study.</h4>
                             <div class=" 6u 12u$(small)">
                                 <!-- Radio button for agree -->
                                 <input type="radio" id="agree-Y" name="agree" checked required>
