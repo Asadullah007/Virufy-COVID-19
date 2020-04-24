@@ -3458,3 +3458,20 @@ img.virufy-image {
 	color: #6cc091;
 	cursor: pointer;
 }
+
+/* Different styles for the consent form's sections */
+.consent-form-section {
+	margin-bottom: 1em;
+}
+
+.consent-form-section h2, h4, p  {
+	margin-bottom: 0.5em;
+}
+
+.consent-form-section p {
+	text-align: justify;
+}
+
+.consent-form-section div {
+	margin-top: 10px;
+}

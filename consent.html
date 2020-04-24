@@ -42,10 +42,267 @@
             <div class="inner">
                 <header>
                     <h1>Patient Consent Form</h1>
-                    <h3><span style="color: #6cc091">Study Title: </span>Virufy Low-cost Early Detection of COVID-19 via Smartphone with AI.</h3>
+                    <h3>A call to action asking the user to read the form and click submit if they agree.</h3>
                 </header>
             </div>
         </section>
+        
+        <!-- Form is contained in a wrapper  -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <!-- Class 12u means each section will occupy all 12 Bootstrap/Grid columns across all devices -->
+                <section class="consent-form-section 12u">
+                    <h2>Virufy Low-cost Early Detection of COVID-19 via Smartphone with AI</h2>
+                    <p><strong>Doctor Directing Research: </strong>Dr. Shobha Luxmi, Assistant Professor Infectious Diseases at Dow University of Health Sciences</p>
+                    <p><strong>Address: </strong>Mission Rd, Gulzar-e-Hijri Gulzar E Hijri Scheme 33, Karachi, Karachi City, Sindh 74200, Pakistan</p>
+                    <p><strong>Telephone Number: </strong>00923312489763</p>
+                    <p><strong>Office Email: </strong>shobha.luxmi@duhs.edu.pk</p>
+                </section>
+
+                <section class="consent-form-section 12u">
+                    <h2>Consent Form Overview</h2>
+                    <p>You are being asked to participate in a research study. 
+                        A member of the research team will explain what is involved in this study and how it will affect you. 
+                        This consent form describes the study procedures, the risks and benefits of participation, as well as how your confidentiality will be maintained. 
+                        Please take your time to ask questions and feel comfortable making a decision whether to participate or not. 
+                        This process is called <span style="color: #6cc091">informed consent</span>. 
+                        If you decide to participate in this study, you will be asked to sign this form.</p>
+                
+                    <p><strong>Questions marked with <span class="is-required">*</span>are required.</strong></p>
+                </section>
+
+                <section class="consent-form-section 12u">  
+                    
+                    <h2>Consent Details</h2>
+                    <!-- TODO: Add submission API endpoint to action -->
+                    <form id="consent-form" method="POST" action="#">
+                        <!-- 18 or Older -->
+                        <div>
+                            <h4>Please verify if you are 18 years or older.</h4>
+                            <div class=" 4u 12u$(small)">
+                                <input type="radio" id="verify-18" name="verify-18" checked required>
+                                <label for="verify-18">Yes</label>
+                            </div>
+                        </div>
+
+                        <!-- Patient's Name -->
+                        <div>
+                        <h4>Patient's Full Name</h4>
+                            <div class="8u 12u$(small)">
+                                <p>Enter your name [first name, father's name (surname)]</p>
+                                <input type="text" name="patient-name" id="patient-name" value="" placeholder="First Name, Surname" required/>
+                            </div>
+                        </div>
+
+                        <!-- Patient's Name -->
+                        <div>
+                            <h4>Patient ID</h4>
+                            <p>This will be provided by the data collection staff and will be something like DMC-000001</p>
+                            <div class="8u 12u$(small)">
+                                <input type="text" name="patient-ID" id="patient-ID" value="" placeholder="DMC-000001" required/>
+                            </div>
+                        </div>
+
+                        <!-- Why is this study being done? -->
+                        <div class="consent-form-section">
+                            <h4>Why is this study being done?</h4>
+                            <p>You are invited to participate in a research study on the signs and symptoms associated with early-onset and advanced COVID-19.
+                                The data to be collected will be used for the development of an Artificial Intelligence (AI) based COVID-19 risk assessment application. 
+                                This application will be used by physicians to determine how to distribute scarce COVID-19 tests.
+                                You will be asked to record your voice coughing. These recordings and videos will be used to train machine learning models.
+                                You give consent for your video/audio recordings to be used for Training machine models. Additionally, your recordings may be used for future presentations and publications.
+                                
+                                </p>
+                        </div>
+
+                        <!-- What is involved in this study? -->
+                        <div class="consent-form-section">
+                            <h4>What is involved in this study? How long will I be in this study?</h4>
+                            <p>You will be in this study for <span style="color: #6cc091">one day</span>. The study visit will last about 30 minutes. The following procedures will take place during the study visit</p>
+                            <ul>
+                                <li>The study team will collect information about your medical history. We will also ask you questions about your race, ethnicity, gender, and age.</li>
+                                <li>The study team will ask you to use your smartphone to navigate to the study's webpage, where your data will be collected.</li>
+                                <li>The study webpage will walk you through a series of instructions asking you to cough and breathe according to study guidelines. Your audio data will be recorded automatically on the webpage.</li>
+                                <li>Identifying information linking your data to you will be stored separately from your data. Identifying information will only be available to members of the research team, and this information will NOT be made publicly available at any point.</li>
+                            </ul>
+
+                            <h4>Information to be collected</h4>
+                            <p>During this study, Dr. Shobha and her research team may collect information about you for the purposes of this research. 
+                                This includes your name, medical record number, initials, date of birth, gender, race, ethnicity, height, weight, vital signs, medical history, medication history, and date of study entry. 
+                                We may also collect the results of physical exams, diagnostic tests, blood tests, finger pulse oximetry, as well as information regarding any side effects you experience.
+                            </p>
+                        </div>
+
+                        <!-- Confidentiality 1 TODO: Confirm if this section should be titled differently -->
+                        <div class="consent-form-section">
+                            <h4>What About Confidentiality?</h4>
+                            <p>
+                                Research using private information and/or specimens is an important way to try to understand human disease. 
+                                You are being given this information because the investigators want to save private information and/or specimens for future research. 
+                                Your specimens will be stored In cloud servers. Your data will be anonymous. It will not be linked to your medical records.
+                                Because your specimens will not be linked to your name after they are stored, you cannot withdraw your consent to the use of the specimens after they are taken. 
+                            </p>
+
+                            <p>Identifiers might be removed from identifiable private information and/or identifiable specimens and, after such removal, 
+                                the information and/or specimens could be used for future research studies or distributed to another investigator for future 
+                                research studies without additional informed consent from you.</p>
+                        </div>
+
+                        <!-- Risks of Study -->
+                        <div class="consent-form-section">
+                            <h4>What are the risks of this study?</h4>
+                            <p><strong>Loss of Confidentiality: </strong>Any time information is collected about you there is a potential risk for loss of confidentiality. 
+                                However, the researchers will make every effort to keep your information confidential. Please refer to the ‘What About Confidentiality’ section 
+                                for information on what measures will be taken to protect your confidentiality.
+                            </p>
+                        </div>
+
+                        <!-- Benefits -->
+                        <div class="consent-form-section">
+                            <h4>Are there any benefits to taking part in this study?</h4>
+                            <p>There are no direct benefits to you for participating in this study.</p>
+                            <p>We hope the information learned from this study will benefit other individuals with COVID-19 in the future.</p>
+                        </div>
+
+                        <!-- Other options -->
+                        <div class="consent-form-section">
+                            <h4>What other options are there?</h4>
+                            <p>You may choose not to participate.</p>
+                            <p>The decision whether or not you wish to participate in this study will not affect your care at the Dow University Hospital.</p>
+                        </div>
+
+                        <!-- Costs -->
+                        <div class="consent-form-section">
+                            <h4>What are the costs?</h4>
+                            <p>
+                                There will be no costs to you or your insurance company resulting from your participation in this research study. 
+                                However, you or your insurance company will be responsible for costs related to your usual medical care. 
+                            </p>
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="consent-form-section">
+                            <h4>Will I be paid for my participation?</h4>
+                            <p>There is no monetary compensation for participating in this study. </p>
+                        </div>
+
+                        <!-- Confidentiality 2 -->
+                        <div class="consent-form-section">
+                            <h4>What about confidentiality?</h4>
+                            <p>Study records that identify you will be kept confidential. Data will be stored in a locked office, or in password protected computers at the Dow University Hospital. 
+                                Only research staff involved in the study will have access to the data except as specified below. 
+                                The data collected in this study will be used for the purpose described in this form. 
+                                By signing this form, you are allowing the research team access to your medical records, which include Protected Health Information. 
+                                Protected Health Information (PHI) consists of any health information that is collected about you, which could include your medical history and new information collected as a result of this study. 
+                                The research team includes all of the individuals indicated on this consent form and other personnel involved in this study at the Dow University Hospital.
+                            </p>
+
+                            <p>
+                                As part of the study, Dr. Shoba and her research team will report the results of your study-related procedures and tests explained above to the study sponsor, 
+                                an international research group named Virufy. To protect your confidentiality, all names will be deleted from study records which are sent off-site. 
+                                You will be identified by your study number instead. The information shared includes your date of birth, as well as the results of tests and procedures done as part of the study. This information is being sent to review the results of the study, to monitor the safety of participants, and to verify the accuracy of the study data.
+                            </p>
+
+                            <p>The study sponsor or their representatives, collaborating companies and independent contractors, including monitoring agencies, may also review your
+                                medical record which may include your name and other identifying information. Please note that these individuals may share your health information 
+                                with someone else.
+                            </p>
+
+                            <p>Your records may be reviewed by federal agencies whose responsibility is to protect human subjects in research. 
+                                In addition, representatives of the Dow University Hospital, including the Institutional Review Board, a committee that oversees the research at the Dow University Hospital,
+                                may also view the records of the research. If your research record is reviewed by any of these groups, they may also need to review your entire medical record. 
+                                The results from tests and/or procedures performed as part of this study may become part of your medical record.
+                            </p>
+                            
+                            <p>If health information is shared outside the Dow University Hospital, the same laws that the Dow University Hospital must obey may not protect your health information.</p>
+                        
+                            <p>During your participation in this study, you will have access to your medical record. Dr. Shoba is not required to release to you research information that is not part of your medical record.</p>
+                        
+                            <p>
+                                This consent form will be kept by the research team for at least 6 years. The study results will be kept in your research record and be used by the research team indefinitely.
+                                At the time of study completion, either the research information not already in your medical record will be destroyed or information identifying you will be removed from study results. 
+                                Any research information in your medical record will be kept indefinitely.
+                            </p>
+
+                            <p>
+                                Data from this study may be used in medical publications or presentations. Your name and other identifying information will be removed before this data is used. 
+                                If we wish to use identifying information in publications, we will ask for your approval at that time.
+                            </p>
+                        </div>
+
+                        <!--Rights as a participan -->
+                        <div class="consent-form-section">
+                            <h4>What are my rights as a participant?</h4>
+                            <p>Taking part in this study is voluntary. If you choose not to participate in this study, your care at the DOW University Hospital will not be affected. 
+                                You may choose not to participate at any time during the study. 
+                                Leaving the study will not affect your care at the DOW University Hospital.</p>
+                        
+                            <p>
+                                If you choose to no longer be in the study and you do not want any of your future health
+                                information to be used, you must inform Dr. Shobha in writing at the address on the first page.
+                            </p>
+                        </div>
+                        
+                        <!-- Questions About Rights -->
+                        <div class="consent-form-section">
+                            <p>Clinical Trials Office</p>
+                            <p>Phone: 021-99232660, 38771111</p>
+                            <p>Address: Mission Rd, Gulzar-e-Hijri Gulzar E Hijri Scheme 33, Karachi, Karachi City, Sindh 74200, Pakistan</p>
+                            <p>Office Email: info@duhs.edu.pk</p>
+                        </div>
+
+                        <!-- Questions About the Study-->
+                        <div class="consent-form-section">
+                            <h4>For Questions About the Study</h4>
+                            <p>Dr. Shobha Luxmi, Assistant Professor infectious diseases at Dow University of Health Sciences</p>
+                            <p>Address: Mission Rd, Gulzar-e-Hijri Gulzar E Hijri Scheme 33, Karachi, Karachi City, Sindh 74200, Pakistan</p>
+                            <p>Telephone Number: 00923312489763</p>
+                            <p>Office Email: Shobha.luxmi@duhs.edu.pk</p>
+                        </div>
+
+                        <!-- Consent Declaration -->
+                        <div class="consent-form-section">
+                            <h4>Consent Declaration</h4>
+                            <p>
+                                The research project and the procedures associated with it have been explained to me. 
+                                The experimental procedures have been identified and no guarantee has been given about the possible results. 
+                                I will receive a signed copy of this consent form for my records. If I agree to participate in this study, 
+                                I understand that my participation is voluntary and that I do not have to sign this form if I do not want to be part of this research study.</p>   
+                        </div>
+
+                        <!-- FORM INPUT: Agree to participate -->
+                        <div class="consent-form-section">
+                            <h4>I agree to participate in this study.</h4>
+                            <div class=" 6u 12u$(small)">
+                                <!-- Radio button for agree -->
+                                <input type="radio" id="agree-Y" name="agree" checked required>
+                                <label for="agree-Y">Yes</label>
+                                
+                                <!-- Radio button for disagree -->
+                                <input type="radio" id="agree-N" name="agree" required>
+                                <label for="agree-N">No</label>
+
+                                <!-- Optional text input for other -->
+                                <input type="text" id="agree-other" name="agree"
+                                placeholder="If other, please specify.">  
+                            </div>
+                        </div>
+
+                        <!-- FORM SUBMIT BUTTON -->
+                        <div class="consent-form-section">
+                            <div class="8u">
+                                <ul class="actions">
+                                    <li><input type="submit" value="Submit" onlick="submit_consent()"></li>
+                                    <li><input type="reset" value="Reset"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+    
+            </div>
+        </section>
+        
         <!-- Footer -->
         <footer id="footer">
             <div class="inner">
