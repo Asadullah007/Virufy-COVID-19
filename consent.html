@@ -88,7 +88,7 @@
                         <!-- Patient's Name -->
                         <div>
                         <h4>Patient's Full Name</h4>
-                            <div class="8u 12u$(small)">
+                            <div class="6u 12u$(small)">
                                 <p>Enter your name [first name, father's name (surname)]</p>
                                 <input type="text" name="patient-name" id="patient-name" value="" placeholder="First Name, Surname" required/>
                             </div>
@@ -98,7 +98,7 @@
                         <div>
                             <h4>Patient ID</h4>
                             <p>This will be provided by the data collection staff and will be something like DMC-000001</p>
-                            <div class="8u 12u$(small)">
+                            <div class="6u 12u$(small)">
                                 <input type="text" name="patient-ID" id="patient-ID" value="" placeholder="DMC-000001" required/>
                             </div>
                         </div>
@@ -290,11 +290,9 @@
 
                         <!-- FORM SUBMIT BUTTON -->
                         <div class="consent-form-section">
-                            <div class="8u">
-                                <ul class="actions">
-                                    <li><input type="submit" value="Submit" onlick="submit_consent()"></li>
-                                    <li><input type="reset" value="Reset"></li>
-                                </ul>
+                            <div class="8u consent-submission">
+                                <input type="submit" value="Submit" onlick="submit_consent()">
+                                <input type="reset" value="Reset">
                             </div>
                         </div>
                     </form>
@@ -302,7 +300,7 @@
     
             </div>
         </section>
-        
+
         <!-- Footer -->
         <footer id="footer">
             <div class="inner">

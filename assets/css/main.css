@@ -3475,3 +3475,10 @@ img.virufy-image {
 .consent-form-section div {
 	margin-top: 10px;
 }
+
+/* To remove the blue border that appears around buttons when pressed 
+Not recommended because it affects accessibility. See here:
+https://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome */
+.consent-submission input {
+	outline: 0;
+}
